@@ -30,6 +30,13 @@
             android:targetClass="com.android.launcher3.settings.SettingsIcons" />
     </Preference>
 
+    <SwitchPreference
+        android:key="show_hotseat_bg"
+        android:title="@string/hotseat_bg_title"
+        android:summary="@string/hotseat_bg_summary"
+        android:defaultValue="true"
+        android:persistent="true"/>
+
     <Preference
         android:key="home_screen"
         android:title="@string/home_category_title"

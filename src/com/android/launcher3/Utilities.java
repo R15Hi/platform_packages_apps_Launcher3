@@ -157,6 +157,11 @@ public final class Utilities {
     public static final String EXTRA_WALLPAPER_OFFSET = "com.android.launcher3.WALLPAPER_OFFSET";
     public static final String EXTRA_WALLPAPER_FLAVOR = "com.android.launcher3.WALLPAPER_FLAVOR";
 
+    public static final String KEY_DOCK_SEARCH = "pref_dock_search";
+    public static final String SEARCH_PACKAGE = "com.google.android.googlequicksearchbox";
+
+    public static final String SHOW_HOTSEAT_BG = "show_hotseat_bg";
+
     public static boolean IS_RUNNING_IN_TEST_HARNESS =
                     ActivityManager.isRunningInTestHarness();
 
@@ -723,8 +728,13 @@ public final class Utilities {
     }
 
     public static int getFontSizeModifier(Context context) {
-        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+    	SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getInt(FONT_SIZE, 100);
+    }
+
+    public static boolean isDockBgEnabled(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(SHOW_HOTSEAT_BG, true);
     }
 
     public static boolean isDoubleTapGestureEnabled(Context context) {

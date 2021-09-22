@@ -261,5 +261,8 @@
 
     <!-- Dashboard foreground image inset (from background edge to foreground edge) -->
     <dimen name="octavi_dashboard_tile_foreground_image_inset">6dp</dimen>
+    
+    <!-- Appseat -->
+    <dimen name="bkg_appseat_radius">22dp</dimen>
 
 </resources>

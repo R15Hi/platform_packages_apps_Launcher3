@@ -21,6 +21,13 @@
         android:persistent="true"
         android:summary="@string/pref_recents_show_memory_summary"
         android:title="@string/pref_recents_show_memory_title"/>
+               
+    <com.android.launcher3.widget.SwitchPreference 
+        android:key="show_hotseat_bg"
+        android:title="@string/hotseat_bg_title"
+        android:summary="@string/hotseat_bg_summary"
+        android:defaultValue="true"
+        android:persistent="true"/>
 
     <androidx.preference.PreferenceScreen
         android:key="pref_developer_options"

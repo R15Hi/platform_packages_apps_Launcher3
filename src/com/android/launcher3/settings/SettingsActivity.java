@@ -83,10 +83,13 @@ public class SettingsActivity extends Activity
         Utilities.getPrefs(getApplicationContext()).registerOnSharedPreferenceChangeListener(this);
     }
 
-    @Override
+        @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-    }
-
+   if(Utilities.SHOW_HOTSEAT_BG.equals(key)) {
+                LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+           }
+        }
+        
     private boolean startFragment(String fragment, Bundle args, String key) {
         if (Utilities.ATLEAST_P && getFragmentManager().isStateSaved()) {
             // Sometimes onClick can come after onPause because of being posted on the handler.
